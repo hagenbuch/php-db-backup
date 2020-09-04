@@ -1,14 +1,15 @@
 # php-db-backup
 Backup script for generational backups of a SQL database
 
-# Fileame
+## Filename
 
 db-backup.php
 
-# Version
+## Version
 
 20161019
-# Purpose
+
+## Purpose
 
 Make a daily backup of a database whenever called with the right token
 
@@ -16,19 +17,19 @@ Make a daily backup of a database whenever called with the right token
 - Keep weekly backups for a number of weeks
 - Keep monthly backups for a number of months
 
-# Usage: 
+## Usage
 
-Called from a cronjob (like wget http://domain.tld/db-backup.php?secrettoken=xyz ) or included from / appended to another script
+Call from a cronjob (like wget http://domain.tld/db-backup.php?secrettoken=xyz ) or included from / appended to another script
 
-# License
+## License
 
-MIT
+MIT License
 
-# Author
+## Author
 
 Andreas Delleske
 
-# Dependencies 
+## Dependencies 
 
 - SQL (MySQL, MariaDB)
 - PHP > 5.6 on Apache webserver
