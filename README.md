@@ -45,6 +45,10 @@ Call from a cronjob (like wget http://domain.tld/db-backup.php?secrettoken=xyz )
 
 Could be adapted to use a public webroot folder even for the database files but then, the webserver would have to be configured accordingly (.htaccess for Pacahe)
 
+## Rant
+
+Yeah, it's a dirty hack, it's not object-oriented, has not even a function :-)
+
 ## License
 
 MIT License
