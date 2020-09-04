@@ -9,7 +9,7 @@
  *          Keep monthly backups for a number of months
  *   Usage: Called from a cronjob (like wget http://domain.tld/db-backup.php?secrettoken=xyz )
  *          or included from / appended to another script
- * License: Public domain
+ * License: MIT License
  *  Author: Andreas Delleske
  * Depends: SQL (MySQL, MariaDB)
  *          PHP > 5.6 on Apache webserver
