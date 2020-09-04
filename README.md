@@ -41,6 +41,10 @@ Call from a cronjob (like wget http://domain.tld/db-backup.php?secrettoken=xyz )
 - Also the use of "exec" and shell commands in your webspace might be restricted. Don't be disappointed if it doesn't work.
 - Make sure you script on the webserver can not be executed or read by anyone else. I can't give you exact hints how to do it, depends very much on your webhoster.
 
+## Room for improvement
+
+Could be adapted to use a public webroot folder even for the database files but then, the webserver would have to be configured accordingly (.htaccess for Pacahe)
+
 ## License
 
 MIT License
