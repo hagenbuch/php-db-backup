@@ -37,7 +37,7 @@ Call from a cronjob (like wget http://domain.tld/db-backup.php?secrettoken=xyz )
 ## Security
 
 - The folder of the created database files must be **outside** of the web root otherwise an attacker can guess the filename!
-- Make sure the file's sourcecode can't be read by appending an "s" to the filename extension, like gb-backup.phps (feature of the webserver!)
+- Make sure the file's sourcecode can't be read by appending an "s" to the filename extension, like db-backup.phps (feature of the webserver!)
 - Also the use of "exec" and shell commands in your webspace might be restricted. Don't be disappointed if it doesn't work.
 - Make sure you script on the webserver can not be executed or read by anyone else. I can't give you exact hints how to do it, depends very much on your webhoster.
 
@@ -61,4 +61,7 @@ Andreas Delleske
 - Permission to use commands mysqldump, gzip in the shell 
 - Webserver is permitted to write to the filesystem
 - Works on file structure of all-inkl.com
-- Bugs: Does not work on Microsoft Windows
+
+## Bugs
+
+Does not work on Microsoft Windows
