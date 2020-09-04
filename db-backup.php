@@ -7,7 +7,7 @@
  *          Keep daily backups for a certain number of days
  *          Keep weekly backups for a number of weeks
  *          Keep monthly backups for a number of months
- *   Usage: Called from a cronjob (like wget http://domain.tld/db-backup.php?secrettoken=supersecret )
+ *   Usage: Called from a cronjob (like wget http://domain.tld/db-backup.php?secrettoken=xyz )
  *          or included from / appended to another script
  * License: Public domain
  *  Author: Andreas Delleske
@@ -27,7 +27,7 @@ $pathelements = explode('/', $_SERVER['DOCUMENT_ROOT']);
 $backupfolderbasepath = implode('/', array_splice($pathelements, 0, 4)) . '/';
 
 // configure here:
-$tokenhash = 'f75778f7425be4db0369d09af37a6c2b9a83dea0e53e7bd57412e4b060e607f7';
+$tokenhash = 'f75778f7425be4db0369d09af37a6c2b9a83dea0e53e7b997412e4b060e607f7';
 $dbname = '<dbname>'; // database name
 $dbuser = '<dbuser>'; // database username
 $dbpasswd = '<dbpassword>';
