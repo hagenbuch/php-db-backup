@@ -3,10 +3,20 @@ Backup script for generational backups of a SQL database
 
 ## Filenames
 
-- db-backup.php for the executed script doing all the work
-- <YYYY><MM><DD>w<WW>-<domain>-<dbname>.sql.gz in a folder named by the database.
+```
+db-backup.php
+```
+
+for the executed script doing all the work
+
+```
+<YYYY><MM><DD>w<WW>-<domain>-<dbname>.sql.gz 
+```
+in a folder named by the database.
   
-Change the script according to your needs, it would have been too messy to make everything configurable.
+Change the script according to your demand, it would have been too messy to make everything configurable.
+
+If you don't understand it, you would most likely not understand the security implications too so please don't use it then.
 
 ## Version
 
