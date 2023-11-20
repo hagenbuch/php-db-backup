@@ -2,7 +2,7 @@
 
 /**
  *    Name: db-backup.php
- * Version: 20161019
+ * Version: 20231119
  * Purpose: Make a daily backup of a database whenever called with the right token
  *          Keep daily backups for a certain number of days
  *          Keep weekly backups for a number of weeks
@@ -72,7 +72,7 @@ if(!file_exists($backupfolder)) {
 	$output .= 'Directory "' . $backupfolder . '" created.' . $eol;
 }
 $now = time();
-$datestring = strftime('%Y%m%dw%W', $now);
+$datestring = date('Ymd\wW', $now);
 $sqlfilename = $datestring . '-' . $filenamepart . '.sql';
 $sqlfile = $backupfolder . '/' . $sqlfilename;
 if(file_exists($sqlfile . '.gz')) {
@@ -119,10 +119,10 @@ foreach($filelist as $file) {
 		$output .= 'Unknown file "' . $file . '" - keep it' . $eol;
 		continue;
 	}
-	$year = $matches[1];
-	$month = $matches[2];
-	$day = $matches[3];
-	$week = $matches[4];
+	$year = intval($matches[1]);
+	$month = intval($matches[2]);
+	$day = intval($matches[3]);
+	$week = intval($matches[4]);
 	// 12:00 so we get around daylight savings time problems:
 	$timestamp = mktime(12, 0, 0, $month, $day, $year);
 	$todayts = mktime(12, 0, 0, date('m'), date('d'), date('Y'));
